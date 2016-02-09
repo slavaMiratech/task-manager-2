@@ -16,5 +16,6 @@ public class SayServiceImplTest {
         String greeting = sayService.sayHello(name);
         Assert.assertNotNull(greeting);
         Assert.assertTrue(greeting.contains("Test"));
+
     }
 }
