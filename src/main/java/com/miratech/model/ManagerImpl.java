@@ -1,7 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.miratech.model;
 
+import com.miratech.training.Employee;
+import com.miratech.training.Manager;
+import com.miratech.training.Task;
+import java.util.List;
+
 /**
- * Created by shuba on 09.02.2016.
+ *
+ * @author eklyagin
  */
-public class ManagerImpl {
+public class ManagerImpl implements Manager{
+
+    @Override
+    public void addEmployee(String userNick) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void disableEmployee(Employee employee) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void assigneTask(Task task, Employee employee) {
+        employee.addTaskToUser(task);
+    }
+
+    @Override
+    public List<Task> getTaskListOfEmployee(Employee employee) {
+        List<Task> list = employee.getTasksList();
+        return list;
+    }
+
+    @Override
+    public List<Employee> getEmployeeOfTask(Task task) {
+        List<Employee> employee = (List<Employee>)task.getReporter();
+        return employee;
+    }
+
 }

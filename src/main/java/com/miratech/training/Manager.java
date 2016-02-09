@@ -6,21 +6,10 @@ import java.util.List;
  * Created by vsytnyk on 17.12.2015.
  */
 public interface Manager {
-    void removeTask(String name);
-    void removeAllTasks();
-    Task assignTask(String name);
-    List<Task> getTaskList();
+    void addEmployee (String userNick);
+    void disableEmployee (Employee employee);
+    void assigneTask (Task task, Employee employee);
+    List<Task> getTaskListOfEmployee (Employee employee);
+    List<Employee> getEmployeeOfTask (Task task);
 
-    void hireEmployee(Employee emp);
-    void fireEmployee(Employee emp);
-    List<Employee> getEmployeeList();
-
-    void assignTaskToEmployee(Task task, Employee emp);
-    void removeTaskFromEmployee(Task task, Employee emp);
-
-    boolean isEmployeeFree(Employee emp);
-    Integer getTaskStatus(Task task);
-
-    void waitTaskComplete(Task task);
-    void waitEmployee(Employee emp);
 }
