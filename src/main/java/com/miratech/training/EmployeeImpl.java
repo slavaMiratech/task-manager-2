@@ -1,8 +1,4 @@
-package com.miratech.training.impl;
-
-import com.miratech.training.Employee;
-import com.miratech.training.Task;
-import com.miratech.training.report.TaskReport;
+package com.miratech.training;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -118,7 +114,7 @@ public class EmployeeImpl implements Employee {
     @Override
     public void reportTime(Task taskId, Date time) {
         //TODO :)
-        taskId.setDeadline(time);
+        taskId.setEndDate(time);
     }
 
     @Override
