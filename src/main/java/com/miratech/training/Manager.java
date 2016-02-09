@@ -8,7 +8,7 @@ import java.util.List;
  */
 public interface Manager {
     ArrayList employeesList = new ArrayList();
-    void addEmployeeToList (Employee employee);
+    public void addEmployeeToList (Employee employee, ArrayList employeesList);
     void disableEmployee (Employee employee);
     void assigneTask (Task task, Employee employee);
     List<Task> getTaskListOfEmployee (Employee employee);
