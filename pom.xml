@@ -88,6 +88,44 @@
 
 
     </dependencies>
+    <profiles>
+        <profile>
+            <id>run-test</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+
+                        <configuration>
+                            <parallel>classes</parallel>
+                            <threadCount>10</threadCount>
+                            <skipTests>false</skipTests>
+                            <includes>
+                                <include>**/tests/*Test.java</include>
+                                <include>**/tests/modes/SwitchBetweenModePartOneTest.java</include>
+                                <include>**/tests/modes/SwitchBetweenModePartTwoTest.java</include>
+                                <include>**/tests/modes/SwitchBetweenModePartThreeTest.java</include>
+                                <include>**/tests/modes/SwitchBetweenModePartFourTest.java</include>
+                                <include>**/tests/modes/SwitchBetweenModePartFiveTest.java</include>
+                                <include>**/tests/modes/AgentUIButtonsTest.java</include>
+                                <include>**/tests/modes/MasterUIButtonsTest.java</include>
+                            </includes>
+                            <excludes>
+                                <exclude>**/BrowserSpecificCssTest.java</exclude>
+                            </excludes>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <build>
         <finalName>playground</finalName>
