@@ -8,6 +8,8 @@ package com.miratech.model;
 import com.miratech.training.Employee;
 import com.miratech.training.Manager;
 import com.miratech.training.Task;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,11 +17,19 @@ import java.util.List;
  * @author eklyagin
  */
 public class ManagerImpl implements Manager{
+    private Employee employee;
+    private ArrayList employeesList;
 
-    @Override
-    public void addEmployee(String userNick) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public void addEmployee(String userNick) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+
+    public void addEmployeeToList (Employee employee, ArrayList employeesList){
+        this.employee = employee;
+        this.employeesList = employeesList;
+        employeesList.add(employee);
+    };
 
     @Override
     public void disableEmployee(Employee employee) {
