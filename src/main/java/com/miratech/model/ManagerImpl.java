@@ -1,21 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.miratech.model;
 
-import com.miratech.training.Employee;
-import com.miratech.training.Manager;
-import com.miratech.training.Task;
+import com.miratech.training.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author eklyagin
- */
 public class ManagerImpl implements Manager{
     private Employee employee;
     private ArrayList employeesList;
